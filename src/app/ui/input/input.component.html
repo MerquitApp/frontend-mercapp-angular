@@ -1,0 +1,7 @@
+<div class="flex flex-col gap-2">
+  <label class="text-black text-sm font-medium" [htmlFor]="name">{{ label }}</label>
+  <div class="flex flex-col gap-1">
+    <input #val class="border-2 border-[#e5e7eb] rounded-md p-2" (input)="onChange(val.value)" (blur)="onBlur()"
+      [placeholder]="placeholder" [value]="value" [name]="name" [type]="type" required />
+  </div>
+</div>

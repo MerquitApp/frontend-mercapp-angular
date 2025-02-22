@@ -1,0 +1,44 @@
+<app-auth-layout>
+  <div class="flex justify-center mb-4">
+    <img width="120" height="5" src="/logo-mercapp.png" alt="logo" />
+  </div>
+  <h1 class="text-center text-2xl font-semibold text-gray-800">
+    Compra y vende en Mercapp
+  </h1>
+  <p class="text-center text-sm text-gray-600 mb-6">
+    Consigue los mejores precios y vende lo que ya no usas.
+  </p>
+  <div class="space-y-4">
+    <form id="login-form" class="flex justify-center flex-col gap-2" [formGroup]="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+      <app-ui-input label="Correo electrónico" name="email" type="email" placeholder="example@mail.com"
+        formControlName="email"></app-ui-input>
+      <app-ui-input label="Contraseña" name="password" type="password" placeholder="********"
+        formControlName="password"></app-ui-input>
+        <button
+          class="flex w-full items-center justify-center space-x-2 rounded-md bg-primaryPalette px-4 py-2 text-white shadow-sm transition-all hover:opacity-90  active:scale-[0.98] p-2 disabled:opacity-80 disabled:cursor-not-allowed cursor-pointer"
+          type="submit" form="login-form">
+          Iniciar sesión
+        </button>
+    </form>
+  </div>
+  <div class="flex flex-col gap-2 mt-4">
+    <p class="text-center text-sm text-gray-600">
+      ¿No tienes cuenta?
+      <a routerLink="/register" class="font-medium text-primaryPalette hover:underline">
+        Regístrate
+      </a>
+    </p>
+    <p class="text-center text-[14px] text-gray-600">
+      ¿Quieres iniciar de otra forma?
+      <a routerLink="/login" class="font-medium text-primaryPalette hover:underline">
+        Cambiar método
+      </a>
+    </p>
+    <p class="text-center text-sm text-gray-600">
+      ¿Has olvidado tu contraseña?
+      <a routerLink="/forgot-password" class="font-medium text-primaryPalette hover:underline">
+        Cambiar contaseña
+      </a>
+    </p>
+  </div>
+</app-auth-layout>

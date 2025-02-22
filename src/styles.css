@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-VariableFont_wght.woff2");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Italic-VariableFont_wght.woff2");
+  font-style: italic;
+}
+
+@theme {
+  --font-display: "Montserrat", sans-serif;
+
+  --color-primaryPalette: #416954;
+  --color-secondaryPalette: #d9d9d9;
+  --color-whitePalette: #ffffff;
+  --color-grayPalette: #828282;
+}

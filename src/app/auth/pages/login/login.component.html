@@ -1,0 +1,38 @@
+<app-auth-layout>
+  <div class="flex items-center justify-center mb-4">
+    <img src="/logo-mercapp.png" width="120" height="5" alt="logo" />
+  </div>
+  <h1 class="text-center text-2xl font-semibold text-gray-800">
+    Compra y vende en Mercapp
+  </h1>
+  <p class="text-center text-sm text-gray-600 mb-6">
+    Consigue los mejores precios y vende lo que ya no usas.
+  </p>
+  <div class="space-y-4">
+    <a routerLink="/email"
+      class="flex w-full items-center justify-center space-x-2 rounded-md bg-primaryPalette py-2 text-white shadow-sm transition-opacity hover:opacity-90">
+      Iniciar sesión con email
+    </a>
+    <a href=""
+      class="flex w-full items-center justify-center space-x-2 rounded-md border border-[#e5e7eb] bg-white py-2 text-gray-600 hover:bg-gray-50">
+      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 488 512" height="1em" width="1em"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z">
+        </path>
+      </svg>
+      <span>Continuar con Google</span>
+    </a>
+    <a href=""
+      class="flex w-full items-center justify-center space-x-2 rounded-md bg-zinc-600 py-2 text-white shadow-sm hover:bg-zinc-700">
+      <lucide-angular [img]="GithubIcon" class="h-5"></lucide-angular>
+      <span>Continuar con Github</span>
+    </a>
+  </div>
+  <p class="mt-4 text-center text-sm text-gray-600">
+    ¿No tienes cuenta?
+    <a routerLink="/register" class="font-medium text-primaryPalette hover:underline">
+      Regístrate
+    </a>
+  </p>
+</app-auth-layout>
