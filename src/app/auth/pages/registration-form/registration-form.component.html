@@ -1,0 +1,68 @@
+<app-auth-layout>
+  <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
+    <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
+      <h3 class="text-2xl font-bold text-center text-gray-900">
+        Compra y vende en Mercapp
+      </h3>
+      <p class="text-center text-gray-500 mb-6">
+        Consigue los mejores precios y gana dinero con lo que no demandas.
+      </p>
+
+      <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-4">
+        <div>
+          <label class="block text-gray-700 font-medium">Nombre</label>
+          <input type="text" formControlName="name" placeholder="Juan"
+            class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primaryPalette" />
+          <p *ngIf="registrationForm.controls['name'].errors?.['required']" class="text-red-500 text-sm">
+            El nombre es obligatorio
+          </p>
+        </div>
+
+        <div>
+          <label class="block text-gray-700 font-medium">Número de Teléfono</label>
+          <input type="tel" formControlName="phoneNumber" placeholder="Ej: 123456789"
+            class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primaryPalette" />
+          <p *ngIf="registrationForm.controls['phoneNumber'].errors?.['required']" class="text-red-500 text-sm">
+            El número de teléfono es obligatorio
+          </p>
+        </div>
+
+        <div>
+          <label class="block text-gray-700 font-medium">E-mail</label>
+          <input type="email" formControlName="email" placeholder="example@mail.com"
+            class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primaryPalette" />
+          <p *ngIf="registrationForm.controls['email'].errors?.['required']" class="text-red-500 text-sm">
+            El correo es obligatorio
+          </p>
+        </div>
+
+        <div>
+          <label class="block text-gray-700 font-medium">Contraseña</label>
+          <input type="password" formControlName="password" placeholder="********"
+            class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primaryPalette" />
+        </div>
+
+        <div>
+          <label class="block text-gray-700 font-medium">Confirmar Contraseña</label>
+          <input type="password" formControlName="confirmPassword" placeholder="********"
+            class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primaryPalette" />
+          <p *ngIf="registrationForm.controls['confirmPassword'].errors?.['required']" class="text-red-500 text-sm">
+            Debes confirmar tu contraseña
+          </p>
+        </div>
+
+        <button type="submit" [disabled]="registrationForm.invalid"
+          class="w-full bg-primaryPalette transition-opacity hover:opacity-90 text-white font-semibold py-3 rounded-lg disabled:bg-gray-400">
+          Registrarme
+        </button>
+      </form>
+
+      <div class="text-center mt-4">
+        <p class="text-gray-700">
+          ¿Ya tienes una cuenta?
+          <a routerLink="/" class="text-primaryPalette font-semibold hover:underline">Iniciar Sesión</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</app-auth-layout>
