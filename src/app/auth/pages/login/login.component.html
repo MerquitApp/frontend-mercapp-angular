@@ -13,7 +13,7 @@
       class="flex w-full items-center justify-center space-x-2 rounded-md bg-primaryPalette py-2 text-white shadow-sm transition-opacity hover:opacity-90">
       Iniciar sesión con email
     </a>
-    <a href=""
+    <a [href]="googleLoginUrl"
       class="flex w-full items-center justify-center space-x-2 rounded-md border border-[#e5e7eb] bg-white py-2 text-gray-600 hover:bg-gray-50">
       <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 488 512" height="1em" width="1em"
         xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +23,7 @@
       </svg>
       <span>Continuar con Google</span>
     </a>
-    <a href=""
+    <a [href]="githubLoginUrl"
       class="flex w-full items-center justify-center space-x-2 rounded-md bg-zinc-600 py-2 text-white shadow-sm hover:bg-zinc-700">
       <lucide-angular [img]="GithubIcon" class="h-5"></lucide-angular>
       <span>Continuar con Github</span>

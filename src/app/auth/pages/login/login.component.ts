@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Github, LucideAngularModule } from 'lucide-angular';
 import { AuthLayoutComponent } from '../../layouts/auth-layout/auth-layout.component';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -11,4 +12,6 @@ import { AuthLayoutComponent } from '../../layouts/auth-layout/auth-layout.compo
 })
 export class LoginComponent {
   readonly GithubIcon = Github;
+  readonly githubLoginUrl = `${environment.apiUrl}/auth/github`;
+  readonly googleLoginUrl = `${environment.apiUrl}/auth/google`;
 }

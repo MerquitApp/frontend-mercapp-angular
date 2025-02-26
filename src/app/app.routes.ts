@@ -14,11 +14,11 @@ export const routes: Routes = [
     component: LoginEmailComponent,
   },
   {
-    path: '**',
-    component: NotFoundComponent,
-  },
-  {
     path: 'register',
     component: RegistrationFormComponent,
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
   },
 ];
